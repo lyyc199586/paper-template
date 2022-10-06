@@ -1,2 +1,2 @@
 # elsevier-sc-paper
-elsevier sc paper template
+customized elsevier sc paper template

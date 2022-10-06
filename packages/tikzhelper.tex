@@ -1,0 +1,73 @@
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.16}
+\usetikzlibrary{spy} %magnifying glass
+\usetikzlibrary{shapes.misc}
+
+% additional color cycle list
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{colormaps}
+\usepgfplotslibrary{fillbetween}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{patterns}
+\usetikzlibrary{spy}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows,patterns}
+\usepackage{environ}
+\makeatletter
+\newsavebox{\measure@tikzpicture}
+\NewEnviron{scaletikzpicturetowidth}[1]{%
+    \def\tikz@width{#1}%
+    \def\tikzscale{1}\begin{lrbox}{\measure@tikzpicture}%
+        \BODY
+    \end{lrbox}%
+    \pgfmathparse{#1/\wd\measure@tikzpicture}%
+    \edef\tikzscale{\pgfmathresult}%
+    \BODY
+}
+\makeatother
+% style to select only points from #1 to #2 (inclusive)
+\pgfplotsset{select coords between index/.style 2 args={
+            x filter/.code={
+                    \ifnum\coordindex<#1\def\pgfmathresult{}\fi
+                    \ifnum\coordindex>#2\def\pgfmathresult{}\fi
+                }
+        }}
+\pgfplotsset{
+    colormap name=jet
+}
+\pgfplotsset{compat=newest}
+
+\usepackage{tikz}
+
+%externalize tikz to avoid unnecessary recompilation of complicated figures
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+
+
+\newcommand{\tikzsetnextfilenamesafe}[1]{
+    \StrSubstitute{#1}{/}{-}[\temp]
+    \tikzsetnextfilename{\temp}
+}
+\usetikzlibrary{matrix}
+\pgfplotsset{compat=newest}
+
+%\usepackage{stanli}
+
+\tikzstyle{load}   = [ultra thick,-latex]
+\tikzstyle{stress} = [-latex]
+\tikzstyle{dim}    = [latex-latex]
+\tikzstyle{axis}   = [-latex,black!55]
+
+\tikzstyle{isometric}=[x={(0.710cm,-0.410cm)},y={(-0.710cm,-0.410cm)},z={(0cm,0.820cm)}]
+\tikzstyle{dimetric} =[x={(0.935cm,-0.118cm)},y={(0cm,0.943cm)},z={(-0.354cm,-0.312cm)}]
+\tikzstyle{dimetric2}=[x={(0.935cm,-0.118cm)},z={(0cm,0.943cm)},y={(+0.354cm,+0.312cm)}]
+\tikzstyle{trimetric}=[x={(0.926cm,-0.207cm)},y={(0cm,0.837cm)},z={(-0.378cm,-0.507cm)}]
+%Flow chart packages + definitions
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
