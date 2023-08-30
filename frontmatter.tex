@@ -1,135 +1,17 @@
-%%%Author definitions
-\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
-\tsc{WGM}
-\tsc{QE}
-\tsc{EP}
-\tsc{PMS}
-\tsc{BEC}
-\tsc{DE}
-%%%
+\begin{frontmatter}
+  \title{Paper name}
 
-% Uncomment and use as if needed
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newdefinition{rmk}{Remark}
-%\newproof{pf}{Proof}
-%\newproof{pot}{Proof of Theorem \ref{thm}}
+  \author[1]{Yangyuanchen Liu} \author[1]{advisor}
 
-\let\WriteBookmarks\relax
-\def\floatpagepagefraction{1}
-\def\textpagefraction{.001}
+  \address[1]{Duke University} \address[2]{address 2}
 
-% Short title
-\shorttitle{Phase Field for NPL}
+  \begin{abstract}
+    my abstract
 
-% Short author
-\shortauthors{Yangyuanchen Liu et~al.}
+    % One-dimensional simulations demonstrate that the Johnson-cook model is correctly cast into a variational framework. The ability of the model to capture shear band formation is demonstrated. Additionally, it is shown that the model can achieve mesh-insensitive shear band formation by including inertial, viscous, and conductive effects. Mesh insensitivity is demonstrated on a reduced compressive top hat simulation. Finally, a classical mode-III simulation shows the model's ability to capture experimental results under high-speed loading with shear and fracture failure.
+  \end{abstract}
 
-% Main title of the paper
-%\title [mode = title]{A Phase Field based Computational Framework for Nano-Pulsed Lithotripsy}     
-
-%\title [mode = title] { Acoustic Dynamics Interaction with Damage }
-%}
-
-%A Model-Based Framework for Acoustically Induced Damage 
-
-\title [mode = title]{A Model-Based Simulation Framework for Coupled Acoustics, Dynamics, and Damage}
-
-% Title footnote mark
-% eg: \tnotemark[1]
-% \tnotemark[1,2]
-
-% Title footnote 1.
-% eg: \tnotetext[1]{Title footnote text}
-% \tnotetext[<tnote number>]{<tnote text>} 
-% \tnotetext[1]{This document is the results of the research
-%   project funded by the National Science Foundation.}
-
-% \tnotetext[2]{The second title footnote which is a longer text matter
-%   to fill through the whole text width and overflow into
-%   another line in the footnotes area of the first page.}
-
-
-% First author
-%
-% Options: Use if required
-% eg: \author[1,3]{Author Name}[type=editor,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%       prefix=Sir,
-%       orcid=0000-0000-0000-0000,
-%       facebook=<facebook id>,
-%       twitter=<twitter id>,
-%       linkedin=<linkedin id>,
-%       gplus=<gplus id>]
-\author[inst1]{Yangyuanchen Liu}
-
-\author[inst1]{John E. Dolbow}
-% Corresponding author indication
-\cormark[1]
-
-% Footnote of the first author
-\fnmark[1]
-
-% Email id of the first author
-\ead{cvr_1@tug.org.in}
-
-% URL of the first author
-\ead[url]{www.cvr.cc, cvr@sayahna.org}
-
-%  Credit authorship
-% \credit{Conceptualization of this study, Methodology, Software}
-
-% Address/affiliation
-\affiliation[inst1]{organization={Department of Mechanical Engineering and Materials Science},%Department and Organization
-		addressline={Duke University},
-		city={Durham},
-		postcode={NC},
-		% state={State One},
-		country={USA}}
-
-% Corresponding author text
-\cortext[cor1]{Corresponding author}
-
-% Footnote text
-% \fntext[fn1]{This is the first author footnote. but is common to third
-%   author as well.}
-% \fntext[fn2]{Another author footnote, this is a very long footnote and
-%   it should be a really long footnote. But this footnote is not yet
-%   sufficiently long enough to make two lines of footnote text.}
-
-% For a title note without a number/mark
-% \nonumnote{This note has no numbers. In this work we demonstrate $a_b$
-%   the formation Y\_1 of a new type of polariton on the interface
-%   between a cuprous oxide slab and a polystyrene micro-sphere placed
-%   on the slab.
-%   }
-
-% Here goes the abstract
-\begin{abstract}
-abstract
-\end{abstract}
-
-% Use if graphical abstract is present
-% \begin{graphicalabstract}
-% \includegraphics{figs/grabs.pdf}
-% \end{graphicalabstract}
-
-% Research highlights
-% \begin{highlights}
-% \item Research highlights item 1
-% \item Research highlights item 2
-% \item Research highlights item 3
-% \end{highlights}
-
-% Keywords
-% Each keyword is seperated by \sep
-\begin{keywords}
-
-\sep Acoustic-structure-damage model \sep Fluid-solid interaction \sep  Nano-pulse lithotripsy \sep Cohesive phase field
-\end{keywords}
-
-\maketitle
-
-\printcredits
+  \begin{keyword}
+    phase-field; variational;
+  \end{keyword}
+\end{frontmatter}

@@ -1,6 +1,15 @@
-%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
-\documentclass[a4paper,fleqn]{cas-sc}
-\usepackage[authoryear,longnamesfirst]{natbib}
+\documentclass[a4paper, 10pt, 3p]{elsarticle}
+
+%Removes Footer-----
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty{}
+ \let\@evenhead\@empty{}
+ \def\@oddfoot{}%
+ \let\@evenfoot\@oddfoot}
+\makeatother
+%--------------------
+
 \pdfcompresslevel=0
 
 \input{packages/packages.tex}
@@ -11,14 +20,13 @@
 \begin{document}
 
 \input{frontmatter}
-\input{intro/main}
-\input{model/main}
-\input{numer/main}
-\input{concl/main}
+\input{1-intro/main}
+\input{2-model/main}
+\input{3-numer/main}
+\input{4-concl/main}
 
 \bibliographystyle{cas-model2-names}
 \bibliography{bib}
 
 
 \end{document}
-
