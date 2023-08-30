@@ -1,0 +1,1 @@
+Data and scripts of visulizaiton should be in this folder for better management
